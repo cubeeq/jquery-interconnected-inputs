@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Interconnected Inputs</title>
+    <link  href="./node_modules/jquery-ui/themes/base/theme.css" rel="stylesheet">
+    <link  href="./node_modules/jquery-ui/themes/base/datepicker.css" rel="stylesheet">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/jquery-ui/ui/widgets/datepicker.js"></script>
+    <script src="./node_modules/moment/min/moment-with-locales.min.js"></script>
+    <script src="./dist/js/jquery-interconnected-inputs.min.js"></script>
+</head>
+<body>
+
+    <div>From:</div>
+    <input type="text" id="date_from">
+
+    <div>To:</div>
+    <input type="text" id="date_to">
+
+    <script>
+        jQuery(document).ready(function($) {
+            new InterconnectedInputs({
+
+                disableDaysFormat: 'Y/M/D',
+                disableDays: [
+                    '2021-09-12',
+                    '2021-09-13'
+                ],
+
+                datepicker: {
+                    minDate: new Date('2021-09-03')
+                },
+
+                from: {
+                    input: $('#date_from'),
+                    daysDiff: 1,
+                    datepicker: {}
+                },
+
+                to: {
+                    input: $('#date_to'),
+                    daysDiff: 1,
+                    datepicker: {}
+                }
+                
+            }).init();
+        });
+    </script>
+</body>
+</html>
