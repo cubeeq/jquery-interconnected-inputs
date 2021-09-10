@@ -5,3 +5,8 @@ A simple and easy accessory for connecting two input fields with extended option
 ```
 npm install
 ```
+
+## Compilation
+```
+npm run js-minify
+```
