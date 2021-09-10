@@ -19,6 +19,7 @@
   "homepage": "https://github.com/cubeeq/jquery-interconnected-inputs#readme",
   "dependencies": {
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.12.1",
     "moment": "^2.29.1"
   },
   "devDependencies": {
