@@ -10,7 +10,7 @@ export default class InterconnectedInputs {
     dateStart;
     dateEnd;
 
-    coreFormat = 'Y/M/D';
+    coreFormat = 'YYYY/MM/DD';
     message = {
         default: 'Function getMessage must have one parameter.',
         jquery: 'Require: https://jquery.com.',
