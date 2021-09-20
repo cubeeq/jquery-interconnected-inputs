@@ -142,11 +142,12 @@ class InterconnectedInputs {
 
     breakDay() {
         const disabledDays = this.formatedDisableDays();
-        const dateStart    = this.getDateStart();
+        const dateStart    = new Date(this.getDateStart());
 
         for (const i in disabledDays) {
             const date = new Date(disabledDays[i]);
-            if (dateStart < date) {
+
+            if (dateStart <= date) {
                 date.setDate(date.getDate() + this.getToDaysDiff());
                 return date;
             }

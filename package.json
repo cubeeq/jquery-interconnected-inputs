@@ -4,7 +4,7 @@
   "description": "A simple and easy accessory for connecting two input fields with extended options.",
   "main": "dist/js/index.js",
   "scripts": {
-    "js-minify": "uglifyjs --compress --mangle --comments `/^@/` --output dist/js/jquery-interconnected-inputs.min.js src/js/jquery-interconnected-inputs.js"
+    "js-minify": "uglifyjs --compress --mangle --comments /^@/ --output dist/js/jquery-interconnected-inputs.min.js src/js/jquery-interconnected-inputs.js"
   },
   "repository": {
     "type": "git",
