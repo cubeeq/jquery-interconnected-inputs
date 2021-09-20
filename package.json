@@ -2,10 +2,11 @@
   "name": "jquery-interconnected-inputs",
   "version": "1.0.0",
   "description": "A simple and easy accessory for connecting two input fields with extended options.",
-  "main": "dist/js/index.js",
+  "private": true,
   "scripts": {
-    "js-minify": "uglifyjs --compress --mangle --comments /^@/ --output dist/js/jquery-interconnected-inputs.min.js src/js/jquery-interconnected-inputs.js"
+    "build": "webpack"
   },
+  "browserslist": "> 0.25%, not dead",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cubeeq/jquery-interconnected-inputs.git"
@@ -23,6 +24,11 @@
     "moment": "^2.29.1"
   },
   "devDependencies": {
-    "uglify-js": "^3.14.1"
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "babel-loader": "^8.2.2",
+    "uglify-js": "^3.14.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
   }
 }

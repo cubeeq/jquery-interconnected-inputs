@@ -4,7 +4,7 @@
  * @license Licensed under MIT (https://github.com/cubeeq/jquery-interconnected-inputs/blob/master/LICENSE)
  */
 
-class InterconnectedInputs {
+export default class InterconnectedInputs {
 
     dateFrom;
     dateStart;

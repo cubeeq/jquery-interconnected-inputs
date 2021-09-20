@@ -10,44 +10,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="./dist/js/jquery-interconnected-inputs.min.js"></script>
 </head>
 <body>
 
     <div>From:</div>
-    <input type="text" id="date_from">
+    <input type="text" id="date_from" readonly="readonly">
 
     <div>To:</div>
-    <input type="text" id="date_to">
+    <input type="text" id="date_to" readonly="readonly">
 
     <script>
-        jQuery(document).ready(function($) {
-            new InterconnectedInputs({
+        var InterconnectedInputsOptions = {
 
-                disableDaysFormat: 'Y/M/D',
-                disableDays: [
-                    '2021-09-12',
-                    '2021-09-13'
-                ],
+        disableDaysFormat: 'Y/M/D',
+        disableDays: [
+            '2021-09-12',
+            '2021-09-13'
+        ],
 
-                datepicker: {
-                    minDate: new Date('2021-09-03')
-                },
+        datepicker: {
+            minDate: new Date('2021-09-03')
+        },
 
-                from: {
-                    input: $('#date_from'),
-                    daysDiff: 1,
-                    datepicker: {}
-                },
+        from: {
+            input: $('#date_from'),
+            daysDiff: 1,
+            datepicker: {}
+        },
 
-                to: {
-                    input: $('#date_to'),
-                    daysDiff: 1,
-                    datepicker: {}
-                }
-                
-            }).init();
-        });
+        to: {
+            input: $('#date_to'),
+            daysDiff: 1,
+            datepicker: {}
+        }
+
+        }
     </script>
+    <script src="./dist/main.js"></script>
 </body>
 </html>

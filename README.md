@@ -8,5 +8,5 @@ npm install
 
 ## Compilation
 ```
-npm run js-minify
+npm run build
 ```

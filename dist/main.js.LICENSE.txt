@@ -1,0 +1,5 @@
+/*
+ * @class InterconnectedInputs ~jquery-interconnected-inputs~ (https://github.com/cubeeq/jquery-interconnected-inputs)
+ * @author Developped by cubeeq (https://github.com/cubeeq)
+ * @license Licensed under MIT (https://github.com/cubeeq/jquery-interconnected-inputs/blob/master/LICENSE)
+ */
