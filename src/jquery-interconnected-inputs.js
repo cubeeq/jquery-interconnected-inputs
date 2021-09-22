@@ -16,7 +16,7 @@ export default class InterconnectedInputs {
         jquery: 'Require: https://jquery.com.',
         datepicker: 'Require: https://jqueryui.com/datepicker',
         momentjs: 'Require: https://momentjs.com.',
-        jqueryinst: 'The input value is not an jQuery object.',
+        noEl: `Element %str% does not exist.`,
     }
 
 
@@ -47,10 +47,6 @@ export default class InterconnectedInputs {
 
         // Check all dependencies
         self.checkDependencies();
-
-        // Check if the input is of type object jQuery
-        self.checkJQueryObj(inputFrom);
-        self.checkJQueryObj(inputTo);
 
         // DatepickerFrom settings
         let datepickerFrom = {
@@ -116,9 +112,13 @@ export default class InterconnectedInputs {
         inputTo.datepicker(datepickerTo);
     }
 
-    checkJQueryObj(obj) {
-        if (obj instanceof jQuery === false)
-            throw new Error(this.getMessage('jqueryinst'));
+    isExistNode(str) {
+        const el = $(str);
+        if (el.length !== 0) {
+            return el;
+        } else {
+            throw new Error(this.getMessage('noEl', str));
+        }
     }
 
     checkDependencies() {
@@ -208,11 +208,11 @@ export default class InterconnectedInputs {
     }
 
     getInputFrom() {
-        return this.inputFrom;
+        return this.isExistNode(this.inputFrom)
     }
 
     getInputTo() {
-        return this.inputTo;
+        return this.isExistNode(this.inputTo);
     }
 
     getFromDaysDiff() {
@@ -239,8 +239,14 @@ export default class InterconnectedInputs {
         return this.coreFormat;
     }
 
-    getMessage(str) {
-        return this.message[str];
+    getMessage(str, add) {
+        const message = this.message[str];
+        const arr = this.message[str].split('%str%');
+        if (arr.length === 2) {
+            return add ? arr[0] + add + arr[1] : arr[0].trim() + arr[1];
+        } else {
+            return message;
+        }
     }
     
     setDateStart(date) {
