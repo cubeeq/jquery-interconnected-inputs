@@ -16,7 +16,8 @@ export default class InterconnectedInputs {
         jquery: 'Require: https://jquery.com.',
         datepicker: 'Require: https://jqueryui.com/datepicker',
         momentjs: 'Require: https://momentjs.com.',
-        noEl: `Element %str% does not exist.`,
+        noEl: 'Element %str% does not exist.',
+        isNotStr: 'Is not a string.',
     }
 
 
@@ -112,7 +113,12 @@ export default class InterconnectedInputs {
         inputTo.datepicker(datepickerTo);
     }
 
+    isString(str) {
+        return typeof str === 'string';
+    }
+
     isExistNode(str) {
+        if (!this.isString(str)) throw new Error(this.getMessage('isNotStr'));
         const el = $(str);
         if (el.length !== 0) {
             return el;
