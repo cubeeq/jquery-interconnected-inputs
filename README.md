@@ -2,6 +2,8 @@
 
 A simple and easy accessory for connecting two input fields with extended options.
 
+### DEMO - https://cubeeq.github.io/jquery-interconnected-inputs/
+
 ## Installation
 
 ```
