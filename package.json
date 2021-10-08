@@ -1,6 +1,6 @@
 {
   "name": "jquery-interconnected-inputs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple and easy accessory for connecting two input fields with extended options.",
   "private": false,
   "scripts": {
