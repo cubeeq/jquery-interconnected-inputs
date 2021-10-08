@@ -9,26 +9,11 @@ npm install jquery-interconnected-inputs
 ```
 ## Usage
 
-Install webpack https://webpack.js.org/guides/installation/
+Install webpack - https://webpack.js.org/guides/installation/
 
 Install webpack plugins:
-https://webpack.js.org/loaders/css-loader/
-https://webpack.js.org/loaders/style-loader/
-
-**webpack.config.js**
-
-```
-module.exports = {
-	module: {
-		rules: [
-			{
-				test:  /\.css$/i,
-				use: ["style-loader", "css-loader"],
-			}
-		]
-	},
-};
-```
+- https://webpack.js.org/loaders/css-loader/
+- https://webpack.js.org/loaders/style-loader/
 
 
 **index.html**
