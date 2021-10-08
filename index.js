@@ -268,3 +268,5 @@ export default class InterconnectedInputs {
     }
 
 }
+
+jQuery(document).ready($ => new InterconnectedInputs(InterconnectedInputsOptions).init());
